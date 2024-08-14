@@ -140,7 +140,7 @@ public class Homework_1 {
             int days = totalDays % daysInYear;
             System.out.println("Answer : " + minutesInput + " minutes is approximately " + years + " years and " + days + " days.");
         }
-        ;
+
     }
 }
 
