@@ -1,2 +1,2 @@
-# sk15_automation_homework
+# sk15_automation_homeworks
 Enjoy my homework :) 
