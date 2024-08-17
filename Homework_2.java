@@ -13,6 +13,7 @@ public class Homework_2 {
 
     public static void possibleTriangle() {
 
+        // ask the user to enter all 3 angels
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter angle 'a' for triangle (max 7 decimal digits)");
         float a = scanner.nextFloat();
@@ -26,12 +27,12 @@ public class Homework_2 {
         // create a variable that later will help us calculate triangle type
         boolean possibleTriangle = false;
 
-        // first we check if triangle is possible, if not we display error message to user
+        // check if triangle is possible, if not we display error message to user
         if (a + b + c != 180) {
             System.out.print("Triangle is not possible");
         }
          else {
-             // once we establish the triangle is possible we check its type according to its angles
+             // once establish the triangle is possible check its type according to its angles
                 possibleTriangle = true;
              if (a == 90 || b == 90 || c == 90) {
                 System.out.print("Triangle is right-angled");
@@ -42,7 +43,7 @@ public class Homework_2 {
             }
         }
 
-         // after finding the triangle's type by its angles we check its type by sides
+         // after finding the triangle's type by its angles check its type by sides
          if (possibleTriangle == true) {
             if (a == b && b == c) {
                 System.out.print(" and  equilateral");
@@ -54,7 +55,6 @@ public class Homework_2 {
 
         }
     }
-
 
     public static void daysOfTheWeek() {
 
@@ -93,11 +93,12 @@ public class Homework_2 {
 
     public static void workingAge() {
 
+        //prompt the user to enter their age
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your age: ");
         byte age = scanner.nextByte();
 
-        // we check if the use is between 16 and 65 (eligible working age)
+        // check if the use is between 16 and 65 (eligible working age)
         if (age >= 16) {
             if (age > 65) {
                 System.out.print("You are above the working age");
@@ -111,14 +112,14 @@ public class Homework_2 {
 
     public static void revenueCalculator() {
 
+        //prompt the user to enter unit price and quantity
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter unit price: ");
         double price = scanner.nextDouble();
-
         System.out.print("Enter unit quantity: ");
         int quantity = scanner.nextInt();
 
-        // creating variables that will help us with calculations
+        // create variables that calculate and store total price and discounts
         double total = (price * quantity);
         double discountRate1 = 0.15;
         double discountRate2 = 0.20;
@@ -128,7 +129,7 @@ public class Homework_2 {
             // checking if quantity is below required for discount
             System.out.print("The revenue from sale:" + " " + (total - discountTotal) + " and discount:" + " " + discountTotal + "(0%)" );
         } else if (quantity >= 100 && quantity <= 120) {
-            // apply the first discounted rate
+            // checking if quantity fall in first discount rate and apply the discount
             discountTotal = (total * discountRate1);
             System.out.print("The revenue from sale:" + " " + (total - discountTotal) + " and discount:" + " " + discountTotal + "(15%)"  );
         } else {
@@ -138,8 +139,9 @@ public class Homework_2 {
         }
     }
 
-
     public static void destinationAdvisor(){
+
+        //prompt the user to enter budget, days, number of people and vacation type
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vacation budget: ");
@@ -201,13 +203,15 @@ public class Homework_2 {
         // creating a variable that will hold the value if the year is leap or not
         boolean leapYear = false;
 
+        // check if year in divisible by 4, 100 and 400
         if (year % 4 == 0) {
             if (year % 100 != 0 || year % 400 == 0) {
                 leapYear = true;
             }
         }
 
-        if (leapYear) {
+        // display message for user if year is leap or not
+        if (leapYear == true) {
             System.out.println("Year is leap year");
         } else {
             System.out.println("Year is not a leap year");
@@ -216,6 +220,8 @@ public class Homework_2 {
 
     public static void temperatureConverter() {
 
+        // prompt user to enter year and choose way of conversion
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the temperature: ");
         double temperature = scanner.nextDouble();
@@ -223,7 +229,7 @@ public class Homework_2 {
         System.out.print("Convert to Fahrenheit or  Celsius?: ");
         String temp = scanner.next();
 
-        // Perform the conversion based on the user's choice using a switch statement
+        // perform the conversion based on the user's choice using a switch statement
         switch (temp){
             case ("Fahrenheit"):
                 // convert Celsius to Fahrenheit
