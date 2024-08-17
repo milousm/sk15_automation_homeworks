@@ -127,17 +127,19 @@ public class Homework_3 {
         Scanner scanner = new Scanner(System.in);
         int userInput = 0;
 
+        System.out.println("Enter a random number between 1 and 100 to play the game");
+
         //while loop that prompts user to start game and enter number
         while (userInput != randomNumber) {
             // prompt the user to enter a guess
-            System.out.print("Enter a random number between 1 and 100. My guess: ");
+            System.out.print("My number: ");
             userInput = scanner.nextInt();
 
             //check if input is higher, lower or equal to random number
             if (userInput > randomNumber) {
-                System.out.println("Number is too high. Try again! My guess: ");
+                System.out.println("Number is too high. Try again!");
             } else if (userInput < randomNumber) {
-                System.out.println("Number is too low. Try again! My guess: ");
+                System.out.println("Number is too low. Try again!");
             } else {
                 System.out.println("Congratulations! You've guessed the correct number: " + randomNumber);
             }
