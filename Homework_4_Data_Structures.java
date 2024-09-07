@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Homework_4 {
+public class Homework_4_Data_Structures {
 
         public static void main(String[] args) {
 
@@ -499,10 +499,3 @@ public class Homework_4 {
 
 
     }
-
-
-
-
-
-
-}
